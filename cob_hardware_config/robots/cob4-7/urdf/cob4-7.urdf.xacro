@@ -31,6 +31,7 @@
   <xacro:include filename="$(find cob_description)/urdf/sensors/realsense.urdf.xacro" />
   <xacro:include filename="$(find cob_description)/urdf/sensors/realsense_zr300.urdf.xacro" />
   <xacro:include filename="$(find cob_description)/urdf/sensors/kinect.urdf.xacro" />
+  <xacro:include filename="$(find cob_description)/urdf/sensors/rc_visard160.urdf.xacro" />
   <xacro:include filename="$(find cob_description)/urdf/sensors/usb_cam.urdf.xacro" />
   <xacro:include filename="$(find cob_description)/urdf/sensors/sick_s300_laser.urdf.xacro"/>
 
@@ -83,9 +84,12 @@
   <xacro:sensorring name="sensorring" parent="head_3_link" active="true">
     <origin xyz="${sensorring_x} ${sensorring_y} ${sensorring_z}" rpy="${sensorring_roll} ${sensorring_pitch} ${sensorring_yaw}" />
   </xacro:sensorring>
-  <xacro:cob_kinect_v0 name="sensorring_cam3d" ros_topic="sensorring_cam3d" parent="sensorring_link" update_rate="30" data_skip="9">
+  <xacro:rc_160 name="sensorring_cam3d" ros_topic="sensorring_cam3d" parent="sensorring_link" update_rate="30" data_skip="9">
     <origin xyz="${sensorring_cam3d_x} ${sensorring_cam3d_y} ${sensorring_cam3d_z}" rpy="${sensorring_cam3d_roll} ${sensorring_cam3d_pitch} ${sensorring_cam3d_yaw}" />
-  </xacro:cob_kinect_v0>
+  </xacro:rc_160>
+  <!--xacro:cob_kinect_v0 name="sensorring_cam3d" ros_topic="sensorring_cam3d" parent="sensorring_link" update_rate="30" data_skip="9">
+    <origin xyz="${sensorring_cam3d_x} ${sensorring_cam3d_y} ${sensorring_cam3d_z}" rpy="${sensorring_cam3d_roll} ${sensorring_cam3d_pitch} ${sensorring_cam3d_yaw}" />
+  </xacro:cob_kinect_v0-->
 
   <!-- grippers -->
   <xacro:gripper name="gripper_right" parent="arm_right_7_link">
