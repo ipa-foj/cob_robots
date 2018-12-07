@@ -240,12 +240,6 @@
 			</include>
 		</group>
 
-		<include file="$(find cob_bringup)/components/cam3d_rc_visard160.launch">
-			<arg name="robot" value="$(arg robot)"/>
-			<arg name="name" value="sensorring_cam3d"/>
-			<arg name="sim" value="$(arg sim)"/>
-			<arg name="flip" value="true"/>
-		</include>
 	</group>
 
 	<group>
@@ -268,6 +262,13 @@
 		<!-- start common nodes used in hardware and simulation -->
 		<include file="$(find cob_bringup)/drivers/sound.launch">
 			<arg name="robot" value="$(arg robot)"/>
+		</include>
+
+		<include file="$(find cob_bringup)/components/cam3d_rc_visard160.launch">
+			<arg name="robot" value="$(arg robot)"/>
+			<arg name="name" value="sensorring_cam3d"/>
+			<arg name="sim" value="$(arg sim)"/>
+			<arg name="flip" value="true"/>
 		</include>
 	</group>
 
