@@ -84,7 +84,7 @@
   <xacro:sensorring name="sensorring" parent="head_3_link" active="true">
     <origin xyz="${sensorring_x} ${sensorring_y} ${sensorring_z}" rpy="${sensorring_roll} ${sensorring_pitch} ${sensorring_yaw}" />
   </xacro:sensorring>
-  <xacro:rc_160 name="sensorring_cam3d" ros_topic="sensorring_cam3d" parent="sensorring_link">
+  <xacro:rc_160 prefix="sensorring_cam3d_" parent="sensorring_link">
     <origin xyz="${sensorring_cam3d_x} ${sensorring_cam3d_y} ${sensorring_cam3d_z}" rpy="${sensorring_cam3d_roll} ${sensorring_cam3d_pitch} ${sensorring_cam3d_yaw}" />
   </xacro:rc_160>
   <!--xacro:cob_kinect_v0 name="sensorring_cam3d" ros_topic="sensorring_cam3d" parent="sensorring_link" update_rate="30" data_skip="9">
