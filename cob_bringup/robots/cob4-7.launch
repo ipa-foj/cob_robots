@@ -2,6 +2,7 @@
 <launch>
 
 	<arg name="env-script" default="$(find cob_bringup)/env.sh"/>
+	<arg name="monitor" default="false"/>
 
 	<include file="$(find cob_bringup)/robots/cob4-7.xml">
 		<arg name="b1" value="b1"/>
@@ -11,6 +12,7 @@
 		<arg name="s1" value="s1"/>
 		<arg name="h1" value="h1"/>
 		<arg name="env-script" value="$(arg env-script)"/>
+		<arg name="monitor" value="$(arg monitor)"/>
 	</include>
 
 </launch>
