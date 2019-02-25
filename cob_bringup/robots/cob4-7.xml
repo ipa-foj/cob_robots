@@ -11,6 +11,8 @@
 	<arg name="h1" default="localhost"/>
 	<arg name="env-script" default="$(find cob_bringup)/env.sh"/>
 	<arg name="sim" default="false"/>
+
+	<!-- 324 improvements-->
 	<arg name="monitor" default="false"/>
 
 	<!-- upload robot description -->
@@ -133,6 +135,7 @@
 			<arg name="can_device" value="can0"/>
 			<arg name="sim" value="$(arg sim)"/>
 			<arg if="$(arg sim)" name="cartesian_control" value="true"/>
+			<arg name="launch_prefix" value="nice -n -10 ionice -c2 -n0"/>
 		</include>
 
 		<!--include file="$(find cob_bringup)/components/canopen_generic.launch">
@@ -169,6 +172,7 @@
 			<arg name="use_external_sync" value="false"/>
 			<arg name="start_external_sync" value="false"/>
 			<arg name="sim" value="$(arg sim)"/>
+			<arg name="launch_prefix" value="nice -n -10 ionice -c2 -n0"/>
 		</include>
 		<!--include file="$(find cob_bringup)/components/canopen_generic.launch">
 			<arg name="robot" value="$(arg robot)"/>
@@ -214,6 +218,7 @@
 			<arg name="can_device" value="can0"/>
 			<arg name="sim" value="$(arg sim)"/>
 			<arg if="$(arg sim)" name="cartesian_control" value="true"/>
+			<arg name="launch_prefix" value="nice -n -10 ionice -c2 -n0"/>
 		</include>
 		<include file="$(find cob_bringup)/components/canopen_generic.launch">
 			<arg name="robot" value="$(arg robot)"/>
@@ -221,6 +226,7 @@
 			<arg name="can_device" value="can1"/>
 			<arg name="sim" value="$(arg sim)"/>
 			<arg if="$(arg sim)" name="cartesian_control" value="true"/>
+			<arg name="launch_prefix" value="nice -n -10 ionice -c2 -n0"/>
 		</include>
 	</group>
 
