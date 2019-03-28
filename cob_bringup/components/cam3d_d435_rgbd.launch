@@ -17,6 +17,7 @@
 		<arg name="num_worker_threads" value="$(arg num_worker_threads)"/>
 		<arg name="serial_no" value="$(arg serial_no)"/>
                 <arg name="rgb" value="$(arg rgb)"/>
+		<arg name="rgb_processing" value="true"/>
 	</include>
 	<group ns="$(arg name)">
 		<include file="$(find cob_bringup)/tools/hz_monitor.launch">
