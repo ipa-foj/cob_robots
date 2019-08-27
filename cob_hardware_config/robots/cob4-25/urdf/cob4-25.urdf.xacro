@@ -25,7 +25,7 @@
   <xacro:include filename="$(find cob_description)/urdf/cob4_head/head.urdf.xacro" />
 
   <!-- sensorring -->
-  <xacro:include filename="$(find cob_description)/urdf/cob4_sensorring/sensorring.urdf.xacro" />
+  <xacro:include filename="$(find cob_description)/urdf/cob4_sensorring/sensorring.urdf.xacro"/>
 
   <!-- sensors -->
   <xacro:include filename="$(find cob_description)/urdf/sensors/realsense_d435.urdf.xacro" />
@@ -76,7 +76,7 @@
     <origin xyz="${arm_left_x} ${arm_left_y} ${arm_left_z}" rpy="${arm_left_roll} ${arm_left_pitch} ${arm_left_yaw}" />
   </xacro:cob4_arm>
 
-  <xacro:sensorring name="sensorring" parent="head_3_link" active="false">
+  <xacro:sensorring name="sensorring" parent="head_3_link" active="true">
     <origin xyz="${sensorring_x} ${sensorring_y} ${sensorring_z}" rpy="${sensorring_roll} ${sensorring_pitch} ${sensorring_yaw}" />
   </xacro:sensorring>
   <xacro:rc_160 prefix="sensorring_cam3d_" parent="sensorring_link">
