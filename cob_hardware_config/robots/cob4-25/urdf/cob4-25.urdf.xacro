@@ -31,7 +31,6 @@
   <xacro:include filename="$(find cob_description)/urdf/sensors/realsense_d435.urdf.xacro" />
   <xacro:include filename="$(find cob_description)/urdf/sensors/usb_cam.urdf.xacro" />
   <xacro:include filename="$(find cob_description)/urdf/sensors/sick_s300_laser.urdf.xacro"/>
-  <xacro:include filename="$(find cob_description)/urdf/sensors/rc_visard160.urdf.xacro" />
 
 
   <!-- composition of the robot -->
@@ -79,12 +78,12 @@
   <xacro:sensorring name="sensorring" parent="head_3_link" active="true">
     <origin xyz="${sensorring_x} ${sensorring_y} ${sensorring_z}" rpy="${sensorring_roll} ${sensorring_pitch} ${sensorring_yaw}" />
   </xacro:sensorring>
-  <xacro:rc_160 prefix="sensorring_cam3d_" parent="sensorring_link">
+  <!--xacro:rc_160 prefix="sensorring_cam3d_" parent="sensorring_link">
     <origin xyz="${sensorring_cam3d_x} ${sensorring_cam3d_y} ${sensorring_cam3d_z}" rpy="${sensorring_cam3d_roll} ${sensorring_cam3d_pitch} ${sensorring_cam3d_yaw}" />
-  </xacro:rc_160>
-  <!--xacro:realsense_d435 name="sensorring_cam3d" parent="sensorring_link">
+  </xacro:rc_160-->
+  <xacro:realsense_d435 name="sensorring_cam3d" parent="sensorring_link">
     <origin xyz="${sensorring_cam3d_x} ${sensorring_cam3d_y} ${sensorring_cam3d_z}" rpy="${sensorring_cam3d_roll} ${sensorring_cam3d_pitch} ${sensorring_cam3d_yaw}" />
-  </xacro:realsense_d435-->
+  </xacro:realsense_d435>
 
   <!-- grippers -->
   <xacro:gripper name="gripper_right" parent="arm_right_7_link">

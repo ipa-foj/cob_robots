@@ -129,22 +129,22 @@
 			</include>
 		</group>
 
-		<include file="$(find cob_bringup)/components/canopen_generic.launch">
+		<!--include file="$(find cob_bringup)/components/canopen_generic.launch">
 			<arg name="robot" value="$(arg robot)"/>
 			<arg name="component_name" value="torso"/>
 			<arg name="can_device" value="can0"/>
 			<arg name="sim" value="$(arg sim)"/>
 			<arg if="$(arg sim)" name="cartesian_control" value="true"/>
 			<arg name="launch_prefix" value="nice -n -10 ionice -c2 -n0"/>
-		</include>
+		</include-->
 
-		<include file="$(find cob_bringup)/components/cam3d_d435_rgbd.launch">
+		<!--include file="$(find cob_bringup)/components/cam3d_d435_rgbd.launch">
 			<arg name="robot" value="$(arg robot)"/>
 			<arg name="name" value="torso_cam3d_left"/>
 			<arg name="sim" value="$(arg sim)"/>
 			<arg name="flip" value="true"/>
 			<arg name="serial_no" value="817512071590"/>
-		</include>
+		</include-->
 		<include file="$(find cob_bringup)/drivers/light.launch">
 			<arg name="robot" value="$(arg robot)"/>
 			<arg name="component_name" value="light_torso"/>
@@ -164,13 +164,13 @@
 			</include>
 		</group>
 
-		<include file="$(find cob_bringup)/components/cam3d_d435_rgbd.launch">
+		<!--include file="$(find cob_bringup)/components/cam3d_d435_rgbd.launch">
 			<arg name="robot" value="$(arg robot)"/>
 			<arg name="name" value="torso_cam3d_down"/>
 			<arg name="sim" value="$(arg sim)"/>
 			<arg name="flip" value="true"/>
 			<arg name="serial_no" value="817412071048"/>
-		</include>
+		</include-->
 
 		<include file="$(find cob_bringup)/components/canopen_generic.launch">
 			<arg name="robot" value="$(arg robot)"/>
@@ -201,15 +201,15 @@
 				<arg name="ntp_server" value="$(arg b1)"/>
 			</include>
 		</group>
-		<include file="$(find cob_bringup)/components/cam3d_d435_rgbd.launch">
+		<!--include file="$(find cob_bringup)/components/cam3d_d435_rgbd.launch">
 			<arg name="robot" value="$(arg robot)"/>
 			<arg name="name" value="torso_cam3d_right"/>
 			<arg name="sim" value="$(arg sim)"/>
 			<arg name="flip" value="true"/>
 			<arg name="serial_no" value="817412070571"/>
-		</include>
+		</include-->
 
-		<include file="$(find cob_bringup)/components/canopen_generic.launch">
+		<!--include file="$(find cob_bringup)/components/canopen_generic.launch">
 			<arg name="robot" value="$(arg robot)"/>
 			<arg name="component_name" value="sensorring"/>
 			<arg name="can_device" value="can0"/>
@@ -217,7 +217,7 @@
 			<arg name="start_external_sync" value="false"/>
 			<arg name="sim" value="$(arg sim)"/>
 			<arg name="launch_prefix" value="nice -n -10 ionice -c2 -n0"/>
-		</include>
+		</include-->
 
 		<!-- start common nodes used in hardware and simulation -->
 		<include file="$(find cob_script_server)/launch/script_server.launch"/>
@@ -253,22 +253,22 @@
 			</include>
 		</group>
 
-		<include file="$(find cob_bringup)/components/cob4_head_camera.launch">
+		<!--include file="$(find cob_bringup)/components/cob4_head_camera.launch">
 			<arg name="robot" value="$(arg robot)"/>
 			<arg name="sim" value="$(arg sim)"/>
-		</include>
+		</include-->
 
 		<!-- start common nodes used in hardware and simulation -->
 		<include file="$(find cob_bringup)/drivers/sound.launch">
 			<arg name="robot" value="$(arg robot)"/>
 		</include>
 
-		<include file="$(find cob_bringup)/components/cam3d_rc_visard160.launch">
+		<!--include file="$(find cob_bringup)/components/cam3d_rc_visard160.launch">
 			<arg name="robot" value="$(arg robot)"/>
 			<arg name="name" value="sensorring_cam3d"/>
 			<arg name="sim" value="$(arg sim)"/>
 			<arg name="flip" value="true"/>
-		</include>
+		</include-->
 	</group>
 
 	<group> <!-- this is a special group to assign DISPLAY:=0 only to the mimic node (and not to all other nodes, e.g. sound node) -->
