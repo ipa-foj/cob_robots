@@ -21,7 +21,7 @@ joint_trajectory_controller:
       gripper_left_finger_1_joint: {trajectory: 0.1, goal: 0.1}
       gripper_left_finger_2_joint: {trajectory: 0.1, goal: 0.1}
   stop_trajectory_duration: 0.5
-  state_publish_rate:  25
+  state_publish_rate:  50
   action_monitor_rate: 10
   required_drive_mode: 7
 

@@ -261,6 +261,7 @@
 		<!-- start common nodes used in hardware and simulation -->
 		<include file="$(find cob_bringup)/drivers/sound.launch">
 			<arg name="robot" value="$(arg robot)"/>
+			<arg name="voice" value="Katrin"/>
 		</include>
 
 		<include file="$(find cob_bringup)/components/cam3d_rc_visard160.launch">
